@@ -9,10 +9,6 @@
   display: flex;
 }
 
-.section-name {
-  display: flex;
-}
-
 #forms {
   display: flex;
 }
@@ -25,4 +21,12 @@
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#section-name {
+  display: flex;
+}
+
+#section-house-email {
+  display: flex;
 }
