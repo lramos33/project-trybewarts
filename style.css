@@ -30,3 +30,8 @@
 #section-house-email {
   display: flex;
 }
+
+#section-family {
+  display: flex;
+  flex-direction: column;
+}
