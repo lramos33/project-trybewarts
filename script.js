@@ -1,4 +1,6 @@
 const enterButton = document.querySelector('#enter-button');
+const checkbox = document.querySelector('#agreement');
+const submitButton = document.querySelector('#submit-btn');
 
 function loginValidade() {
   const inputEmail = document.querySelector('#email');
@@ -11,4 +13,13 @@ function loginValidade() {
   }
 }
 
+function validadeSubmitButton() {
+  if (checkbox.checked === true) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+}
+
 enterButton.addEventListener('click', loginValidade);
+checkbox.addEventListener('click', validadeSubmitButton);
