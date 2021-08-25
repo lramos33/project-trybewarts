@@ -35,3 +35,8 @@
   display: flex;
   flex-direction: column;
 }
+
+#section-rate {
+  display: flex;
+  align-items: center;
+}
