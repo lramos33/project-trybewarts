@@ -8,3 +8,13 @@
 .trybewarts-login {
   display: flex;
 }
+
+#forms {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 675px;
+}
