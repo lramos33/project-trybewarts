@@ -1,4 +1,3 @@
-
 const enterButton = document.querySelector('#enter-button');
 
 function loginValidade() {
@@ -12,4 +11,4 @@ function loginValidade() {
   }
 }
 
-enterButton.addEventListener("click", loginValidade);
+enterButton.addEventListener('click', loginValidade);
