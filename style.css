@@ -9,6 +9,10 @@
   display: flex;
 }
 
+.section-name {
+  display: flex;
+}
+
 #forms {
   display: flex;
 }
