@@ -1,16 +1,50 @@
+body {
+ margin: 0;
+}
+
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
   align-items: center;
+  padding: 5px 15px;
 }
 
 .trybewarts-login {
   display: flex;
+  padding-right: 50px;
+  align-content: flex-start;
+}
+
+.trybewarts-header-logo {
+  width: 100px;
+}
+
+#trybewarts-header-title {
+  color: white;
+  text-align: center;
 }
 
 #forms {
   display: flex;
+}
+
+#email {
+  border-radius: 5px;
+  height: 30px;
+}
+
+#password {
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+#enter-button {
+  background-color: rgb(78, 44, 131);
+  color: white;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 #evaluation-form {
