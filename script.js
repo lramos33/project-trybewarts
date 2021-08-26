@@ -3,7 +3,7 @@ const checkbox = document.querySelector('#agreement');
 const submitButton = document.querySelector('#submit-btn');
 const textArea = document.querySelector('#textarea');
 const counter = document.querySelector('#counter');
-let length = textArea.getAttribute('maxlength');
+const length = textArea.getAttribute('maxlength');
 
 counter.innerHTML = length;
 
