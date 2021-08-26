@@ -4,6 +4,8 @@ const submitButton = document.querySelector('#submit-btn');
 const textArea = document.querySelector('#textarea');
 const counter = document.querySelector('#counter');
 const length = textArea.getAttribute('maxlength');
+const formSection = document.querySelector('#display-none');
+const inputInfoSection = document.querySelector('#evaluation-form');
 
 counter.innerHTML = length;
 
@@ -30,36 +32,31 @@ function caracterCounter() {
   counter.innerHTML = length - textArea.value.length;
 }
 
-enterButton.addEventListener('click', loginValidade);
-checkbox.addEventListener('click', validadeSubmitButton);
-textArea.addEventListener('keyup', caracterCounter);
-
-// requisito 21
-const formSection = document.querySelector('#display-none');
-const inputInfoSection = document.querySelector('#evaluation-form');
-
-function changeContentToResult(e) {
-  const event = e;
-  event.preventDefault();
-  formSection.style.display = 'none';
-
+// Funções complementares
+function inputNameFunction() {
   const name = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
   const inputFullName = document.createElement('p');
   inputFullName.innerText = (`Nome: ${name} ${lastName}`);
   inputInfoSection.appendChild(inputFullName);
+}
 
+function inputEmailFunction() {
   const email = document.querySelector('#input-email').value;
   const inputEmail = document.createElement('p');
   inputEmail.innerText = (`Email: ${email}`);
   inputInfoSection.appendChild(inputEmail);
+}
 
+function inputHouseFunction() {
   const house = document.querySelector('#house');
   const houseValue = house.options[house.selectedIndex].value;
   const inputHouse = document.createElement('p');
   inputHouse.innerText = (`Casa: ${houseValue}`);
   inputInfoSection.appendChild(inputHouse);
+}
 
+function inputFamilyFunction() {
   const allFamilyInputs = document.querySelectorAll('.family-input');
   for (let index = 0; index < allFamilyInputs.length; index += 1) {
     if (allFamilyInputs[index].checked) {
@@ -69,7 +66,9 @@ function changeContentToResult(e) {
       inputInfoSection.appendChild(inputFamily);
     }
   }
+}
 
+function inputSubjectsFunction() {
   const allSubjects = document.querySelectorAll('.subject');
   const subjectValue = [];
   for (let index = 0; index < allSubjects.length; index += 1) {
@@ -81,7 +80,9 @@ function changeContentToResult(e) {
   const inputSubjects = document.createElement('p');
   inputSubjects.innerText = (`Matérias: ${finalResult}`);
   inputInfoSection.appendChild(inputSubjects);
+}
 
+function inputRateFunction() {
   const allRateInputs = document.querySelectorAll('.family-rate');
   for (let index = 0; index < allRateInputs.length; index += 1) {
     if (allRateInputs[index].checked) {
@@ -91,10 +92,29 @@ function changeContentToResult(e) {
       inputInfoSection.appendChild(inputRate);
     }
   }
+}
 
+function inputTextFunction() {
   const textAreaValue = document.createElement('p');
   textAreaValue.innerText = (`Observações: ${textArea.value}`);
   inputInfoSection.appendChild(textAreaValue);
 }
 
+function changeContentToResult(e) {
+  const event = e;
+  event.preventDefault();
+  formSection.style.display = 'none';
+
+  inputNameFunction();
+  inputEmailFunction();
+  inputHouseFunction();
+  inputFamilyFunction();
+  inputSubjectsFunction();
+  inputRateFunction();
+  inputTextFunction();
+}
+
+enterButton.addEventListener('click', loginValidade);
+checkbox.addEventListener('click', validadeSubmitButton);
+textArea.addEventListener('keyup', caracterCounter);
 submitButton.addEventListener('click', changeContentToResult);
