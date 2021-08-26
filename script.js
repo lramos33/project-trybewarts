@@ -46,18 +46,18 @@ function changeContentToResult(e) {
   const name = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
   const inputFullName = document.createElement('p');
-  inputFullName.innerText = ('Nome: ' + name + ' ' + lastName);
+  inputFullName.innerText = (`Nome: ${name} ${lastName}`);
   inputInfoSection.appendChild(inputFullName);
 
   const email = document.querySelector('#input-email').value;
   const inputEmail = document.createElement('p');
-  inputEmail.innerText = ('Email: ' + email);
+  inputEmail.innerText = (`Email: ${email}`);
   inputInfoSection.appendChild(inputEmail);
 
   const house = document.querySelector('#house');
   const houseValue = house.options[house.selectedIndex].value;
   const inputHouse = document.createElement('p');
-  inputHouse.innerText = ('Casa: ' + houseValue);
+  inputHouse.innerText = (`Casa: ${houseValue}`);
   inputInfoSection.appendChild(inputHouse);
 
   const allFamilyInputs = document.querySelectorAll('.family-input');
@@ -65,7 +65,7 @@ function changeContentToResult(e) {
     if (allFamilyInputs[index].checked) {
       const familyValue = allFamilyInputs[index].value;
       const inputFamily = document.createElement('p');
-      inputFamily.innerText = ('Família: ' + familyValue);
+      inputFamily.innerText = (`Família: ${familyValue}`);
       inputInfoSection.appendChild(inputFamily);
     }
   }
@@ -79,7 +79,7 @@ function changeContentToResult(e) {
   }
   const finalResult = subjectValue.join(', ');
   const inputSubjects = document.createElement('p');
-  inputSubjects.innerText = ('Matérias: ' + finalResult);
+  inputSubjects.innerText = (`Matérias: ${finalResult}`);
   inputInfoSection.appendChild(inputSubjects);
 
   const allRateInputs = document.querySelectorAll('.family-rate');
@@ -87,13 +87,13 @@ function changeContentToResult(e) {
     if (allRateInputs[index].checked) {
       const rateValue = allRateInputs[index].value;
       const inputRate = document.createElement('p');
-      inputRate.innerText = ('Avaliação: ' + rateValue);
+      inputRate.innerText = (`Avaliação: ${rateValue}`);
       inputInfoSection.appendChild(inputRate);
     }
   }
 
   const textAreaValue = document.createElement('p');
-  textAreaValue.innerText = ('Observações: ' + textArea.value);
+  textAreaValue.innerText = (`Observações: ${textArea.value}`);
   inputInfoSection.appendChild(textAreaValue);
 }
 
