@@ -1,6 +1,11 @@
 const enterButton = document.querySelector('#enter-button');
 const checkbox = document.querySelector('#agreement');
 const submitButton = document.querySelector('#submit-btn');
+const textArea = document.querySelector('#textarea');
+const counter = document.querySelector('#counter');
+let length = textArea.getAttribute('maxlength');
+
+counter.innerHTML = length;
 
 function loginValidade() {
   const inputEmail = document.querySelector('#email');
@@ -21,5 +26,10 @@ function validadeSubmitButton() {
   }
 }
 
+function caracterCounter() {
+  counter.innerHTML = length - textArea.value.length;
+}
+
 enterButton.addEventListener('click', loginValidade);
 checkbox.addEventListener('click', validadeSubmitButton);
+textArea.addEventListener('keyup', caracterCounter);
