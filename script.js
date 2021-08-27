@@ -7,7 +7,8 @@ const length = textArea.getAttribute('maxlength');
 const formSection = document.querySelector('#display-none');
 const inputInfoSection = document.querySelector('#evaluation-form');
 
-counter.innerHTML = length;
+// counter.innerHTML = length + '/500';
+counter.innerHTML = (`${length}/500`);
 
 function loginValidade() {
   const inputEmail = document.querySelector('#email');
@@ -23,13 +24,15 @@ function loginValidade() {
 function validadeSubmitButton() {
   if (checkbox.checked === true) {
     submitButton.disabled = false;
+    submitButton.style.backgroundColor = 'rgb(78, 44, 131)';
   } else {
     submitButton.disabled = true;
+    submitButton.style.backgroundColor = 'rgb(177, 152, 217)';
   }
 }
 
 function caracterCounter() {
-  counter.innerHTML = length - textArea.value.length;
+  counter.innerHTML = (`${length - textArea.value.length}/500`);
 }
 
 // Funções complementares
@@ -100,6 +103,7 @@ function inputTextFunction() {
   inputInfoSection.appendChild(textAreaValue);
 }
 
+// Função principal
 function changeContentToResult(e) {
   const event = e;
   event.preventDefault();
