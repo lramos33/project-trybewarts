@@ -64,7 +64,7 @@ hr {
 #evaluation-form {
   display: flex;
   flex-direction: column;
-  flex-basis: 675px;
+  width: 675px;
 }
 
 /* Primeira parte do conteúdo: título, nome, email e casa */
