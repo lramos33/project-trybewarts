@@ -59,6 +59,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(239, 239, 239);
+  height: 88vh;
 }
 
 #evaluation-form {
